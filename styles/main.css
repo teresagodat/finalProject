@@ -2,20 +2,25 @@
 html, body {
   margin: 0;
   padding: 0;
+      max-width: 100%;
+    max-height: 100%;
   overflow: hidden;
   overflow-y: scroll;
 }
 
 
 body {
-   
-    max-width: 100%;
-    max-height: auto;
+    min-height: 100%;
+    margin-top: 1rem;
 
-    background-image: 
 }
 
-
+.wrap {
+      min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -60px;
+}
 
 * {
   box-sizing: border-box;
@@ -30,13 +35,18 @@ body {
 
 
 footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
     clear: both;
     max-width: 100%;
     height: auto;
-    bottom: 0;
     background-color:#FF521D;
     color: black;
-    height: 15rem;
+    height: 6rem;
     text-align: center;
     overflow: hidden;
     font-family: 'Nunito Sans', sans-serif;
@@ -44,13 +54,14 @@ footer {
 
 
 .flex-item   {
-    border: .20rem solid #DBD5CA;
+  
     align-items: stretch;
     justify-content: left;
     width: 80em;
-    max-height: 100em;
+    height: 100em;
     margin: 5rem;
-    padding: 2rem;  
+    padding: 2rem; 
+  
 }
 
 
@@ -64,10 +75,11 @@ footer {
 
 .flex-item h2 {
     font-family: 'BioRhyme Expanded', serif;
-    text-align: left;
+    text-align: center;
     font-size: 1.5rem;
     padding-bottom: 1.5rem;
     padding-left: 1rem;
+    font-weight: bold;
 }
 
 
@@ -76,8 +88,8 @@ footer {
 .flex-item img {
     float: center;
     display: flex;
-    height: 40%;
-    width: 60%;
+    height: 80%;
+    width: 50%;
     max-height: 100%;
     max-width: 100%;
     margin-top: 1rem;
@@ -108,6 +120,7 @@ h2 {
     text-align: left;
     font-size: 1.5rem;
     text-align: center;
+
 }
 
   
@@ -119,8 +132,8 @@ header div {
 header h1 {
     bottom: auto;
     color: black;
-    font-size: 2rem;
-    font-family: 'BioRhyme Expanded', serif;
+    font-size: 3rem;
+    font-weight: bold;
     margin-top: 1rem;
     margin-left: 5rem;
     line-height: 2rem; 
@@ -130,6 +143,7 @@ header h1 {
 header h3 {
     bottom: auto;
     color: black;
+      font-weight: bold;
 }
 
 
@@ -143,29 +157,36 @@ header img  {
 }
 
 
+.flex-item   {
 
+    align-items: stretch;
+    justify-content: left;
+    width: 60em;
+    height: 80rem;
+    margin: 5rem;
+    padding: 2rem;  
+
+}
 
 .item-container {
+    position: relative;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: space-around;
     justify-content: space-around;
     flex-direction: row;
-    flex-wrap: wrap;
+    height: 150rem;
     max-width:100%;
     max-height: 100%;
-    margin-top: 5rem;
-    margin-bottom: 20rem;
-    margin-left: 55rem;
-    margin-right: 55rem;
+    margin-left: 50rem;
+    margin-right: 50rem;
     background-color: #F7FFFD;
+    overflow: hidden;
+
 }
 
 main {
-      display: flex;
-      margin-top: 1rem;
-      max-height: 100%;
-      max-width: 100%;
+
 }
 
 .nav-container {
@@ -227,13 +248,20 @@ section h3 {
 
 
 @media only screen and (max-width: 480px)  {
-
 html, body {
     margin: 0;
     padding: 0;
 }
 
+  body {
+    max-height: 100rem;
+    background-image: none;
 
+  }
+  
+  .back-to-top {
+    color: white;;
+}
 header {
     height: 18rem;
     max-width: 100%;
@@ -244,7 +272,7 @@ header h1, header img {
   }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
 h2 {
@@ -254,6 +282,26 @@ h2 {
     font-size: .5rem;
   }
 
+  header h3 {
+    font-size: 1.9rem;
+  }
+  
+  .item-container {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    flex-direction: row;
+
+    height: 280rem;
+    max-width:70%;
+    max-height: 100%;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 0rem;
+    background-color: white;
+}
 
 nav ul li {
     float: none;
@@ -272,31 +320,16 @@ nav-container a {
     border-bottom: solid .1rem white; 
   }
 
-  .cart-info {
-    float: none;
-    text-align: center;
-    font-size: 2rem;
-    padding-left: 2rem;
-  }
+ 
 
-  
-main {
-    background-color: #FF521D;
-  }
 
-  
-.filter {
-    width: 100%;
-    text-align: left;
-    padding-top: 5rem;
-    margin-left: -5rem;
-  }
+
 
   
 
 .flex-item   {
-    width: 100rem;
-    height: 60rem;
+    width: 50rem;
+    height: 80rem;
     margin: 10px; 
   }
 
@@ -305,7 +338,7 @@ main {
   }
 
 .flex-item p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   }
 .flex-item img {
 
@@ -315,32 +348,9 @@ main {
   nav li a:hover:not(.active) {background-color: #EAF2F0;}
 
 footer {
-    background-color: white;
+    background-color: #ACB2B1;
   }
 
-.select {
-    width: 20rem;
-    margin-top: 1rem;
-  }
 
-.add-to-cart {
-  background-color: aliceblue;
-    font-family: 'Nunito Sans', sans-serif;
-    margin-top: 4rem;
-    bottom: 0;
-    float: left;
-    right: 4rem;
-    width: 11rem;  
-    border-radius: .75rem;
-}
-
-.remove-all-items {
-    background-color: aliceblue;
-    font-family: 'Nunito Sans', sans-serif;  
-    float: left;
-    margin-bottom: 1rem;
-    width: 15rem;
-    border-radius: .75rem;
-}
 
 }
