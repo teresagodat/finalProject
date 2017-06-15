@@ -88,12 +88,12 @@ footer {
 .flex-item img {
     float: center;
     display: flex;
-    height: 80%;
+    height: 60%;
     width: 50%;
     max-height: 100%;
     max-width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-left: 13rem
 }
 
 
